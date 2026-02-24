@@ -1,132 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Sahil Mohammed | Mortgage Operations Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f9;
-            color: #333;
-        }
-        header {
-            background-color: #0a2540;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #0a2540;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .skills span {
-            display: inline-block;
-            background: #e3e8f0;
-            padding: 8px 12px;
-            border-radius: 20px;
-            margin: 5px;
-            font-size: 14px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0a2540;
-            color: white;
-            margin-top: 40px;
-        }
-        a {
-            color: #1d4ed8;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdul Sahil Mohammed | Professional Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(10, 37, 64, 0.95);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4f9cff;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a2540, #1d4ed8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #0a2540;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background: linear-gradient(135deg, #1d4ed8, #0a2540);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    margin: 6px;
+    font-size: 14px;
+}
+
+.footer {
+    background: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.timeline-title {
+    font-weight: 600;
+}
+
+.small-text {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+</style>
 </head>
+
 <body>
 
+<nav>
+<div><strong>Abdul Sahil Mohammed</strong></div>
+<div>
+<a href="#summary">Summary</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+</div>
+</nav>
+
 <header>
-    <h1>Abdul Sahil Mohammed</h1>
-    <p>Mortgage Operations & Production Analyst</p>
-    <p>Lakewood, OH | Open to Hybrid Opportunities</p>
+<h1>Mortgage Operations & Production Analyst</h1>
+<p>Lakewood, OH</p>
+<p>(216) 484-4805 | amohammed2434@my.trine.edu</p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            Detail-oriented Business Analytics graduate student with hands-on experience in financial data validation, documentation review, workflow coordination, and KPI tracking. Passionate about improving production efficiency in mortgage and financial services environments.
-        </p>
-    </div>
+<section id="summary">
+<h2>Professional Summary</h2>
+<div class="card">
+Detail-oriented Business Analytics graduate student with hands-on experience in financial data validation, documentation review, workflow coordination, and process improvement. Experienced in supporting cross-functional teams, ensuring data accuracy, maintaining compliance standards, and improving operational efficiency. Seeking a Production Partner role to support mortgage advisors and loan production processes in a fast-paced retail lending environment.
+</div>
 </section>
 
-<section>
-    <h2>Featured Project</h2>
-    <div class="card">
-        <h3>Mortgage Loan Production & Workflow Simulation</h3>
-        <p><strong>Objective:</strong> Simulated a distributed retail mortgage production workflow to analyze documentation completeness, compliance checks, processing timelines, and approval outcomes.</p>
-        <ul>
-            <li>Calculated Approval Rate and Compliance Pass Rate</li>
-            <li>Analyzed Average Processing Time</li>
-            <li>Identified Missing Documentation Patterns</li>
-            <li>Performed Risk Segmentation using Credit Score & DTI</li>
-            <li>Developed KPI tracking dashboards using Python & Excel</li>
-        </ul>
-        <p><strong>Tools Used:</strong> Python (Pandas), Excel, Jupyter Notebook</p>
-    </div>
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="card">
+<div class="timeline-title">Financial & Risk Analyst – Academic & Capstone Projects</div>
+<div class="small-text">Trine University | Aug 2024 – Dec 2025 | Angola, Indiana</div>
+<ul>
+<li>Reviewed and validated financial documentation to ensure completeness and accuracy.</li>
+<li>Conducted file-level data validation to identify discrepancies and compliance gaps.</li>
+<li>Built Excel-based KPI tracking systems to monitor documentation status and timelines.</li>
+<li>Performed root cause analysis to identify process bottlenecks.</li>
+<li>Prepared structured stakeholder-ready reports and presentations.</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="timeline-title">Business Development Intern</div>
+<div class="small-text">Mercury Associates | Dec 2020 – Feb 2021 | Telangana, India</div>
+<ul>
+<li>Analyzed operational and financial data for revenue forecasting.</li>
+<li>Developed standardized Excel tracking reports.</li>
+<li>Improved reporting efficiency contributing to 15% sales effectiveness increase.</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="timeline-title">Rural Banking Systems Analysis – Academic Project</div>
+<div class="small-text">Osmania University | Jan 2023 – Jul 2023 | Telangana, India</div>
+<ul>
+<li>Analyzed transaction workflows to identify operational inefficiencies.</li>
+<li>Delivered recommendations projected to improve profitability by 30%.</li>
+</ul>
+</div>
+
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="card skills">
-        <span>Loan File Review</span>
-        <span>Documentation Validation</span>
-        <span>Workflow Coordination</span>
-        <span>KPI Tracking</span>
-        <span>Regulatory Compliance Support</span>
-        <span>Excel Modeling</span>
-        <span>Python (Pandas)</span>
-        <span>Power BI</span>
-        <span>SQL</span>
-        <span>Process Improvement</span>
-    </div>
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<strong>Master of Science in Business Analytics</strong><br>
+Trine University | GPA: 3.80 / 4.00
+</div>
+
+<div class="card">
+<strong>Bachelor of Commerce in Computer Application</strong><br>
+Osmania University | GPA: 3.39 / 4.00
+</div>
+
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: amohammed2434@my.trine.edu</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/abdul-sahil/" target="_blank">linkedin.com/in/abdul-sahil</a></p>
-        <p>GitHub: <a href="https://github.com/abdulsahiljan08" target="_blank">github.com/abdulsahiljan08</a></p>
-    </div>
+<section id="skills">
+<h2>Core Competencies & Technical Skills</h2>
+
+<div class="card skills">
+<span>Loan File Review</span>
+<span>Documentation Validation</span>
+<span>Workflow Coordination</span>
+<span>KPI Tracking</span>
+<span>Excel Modeling</span>
+<span>Power BI</span>
+<span>Tableau</span>
+<span>SQL</span>
+<span>Process Improvement</span>
+<span>Regulatory Compliance</span>
+<span>Client Communication</span>
+<span>GitHub</span>
+</div>
+
 </section>
 
-<footer>
-    © 2026 Abdul Sahil Mohammed | Mortgage Operations Portfolio
-</footer>
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="card">
+<ul>
+<li>Data Science with R – Capstone Project</li>
+<li>Data Analysis with R</li>
+<li>Data Visualization with R</li>
+</ul>
+</div>
+</section>
+
+<div class="footer">
+© 2026 Abdul Sahil Mohammed | Professional Portfolio
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
