@@ -1,294 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdul Sahil Mohammed | Elite Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0f172a;
-color:#e2e8f0;
-overflow-x:hidden;
-}
-
-/* Animated Gradient Background */
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle at 20% 30%,rgba(20,184,166,0.15),transparent 40%),
-radial-gradient(circle at 80% 70%,rgba(59,130,246,0.15),transparent 40%);
-animation:moveBG 15s infinite alternate ease-in-out;
-z-index:-1;
-}
-
-@keyframes moveBG{
-0%{transform:translate(0,0);}
-100%{transform:translate(-5%, -5%);}
-}
-
-/* Navbar */
-nav{
-position:fixed;
-width:100%;
-backdrop-filter:blur(10px);
-background:rgba(15,23,42,0.7);
-padding:15px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-nav a{
-text-decoration:none;
-margin-left:20px;
-color:#e2e8f0;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#14b8a6;
-}
-
-/* Hero */
-header{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 20px;
-}
-
-.profile{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #14b8a6;
-margin-bottom:25px;
-box-shadow:0 0 40px rgba(20,184,166,0.5);
-}
-
-h1{
-font-size:46px;
-color:#14b8a6;
-}
-
-h2{
-font-weight:400;
-margin:10px 0;
-color:#94a3b8;
-}
-
-.btn{
-display:inline-block;
-padding:10px 25px;
-margin:8px;
-border-radius:30px;
-text-decoration:none;
-transition:0.3s;
-font-weight:500;
-}
-
-.primary{
-background:#14b8a6;
-color:#0f172a;
-}
-
-.primary:hover{
-background:#0ea5a4;
-}
-
-.outline{
-border:2px solid #14b8a6;
-color:#14b8a6;
-}
-
-.outline:hover{
-background:#14b8a6;
-color:#0f172a;
-}
-
-/* Sections */
-section{
-padding:100px 20px;
-max-width:1100px;
-margin:auto;
-opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
-}
-
-section.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.section-title{
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
-color:#14b8a6;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.1);
-margin-bottom:30px;
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(20,184,166,0.3);
-}
-
-/* Skill Bars */
-.skill{
-margin-bottom:15px;
-}
-
-.progress{
-background:rgba(255,255,255,0.1);
-border-radius:20px;
-overflow:hidden;
-}
-
-.progress div{
-height:8px;
-background:#14b8a6;
-width:0;
-transition:width 2s ease;
-}
-
-/* Footer */
-footer{
-background:#020617;
-text-align:center;
-padding:25px;
-color:#94a3b8;
-}
-
-/* Responsive */
-@media(max-width:768px){
-nav{padding:15px 20px;}
-h1{font-size:32px;}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Sahil Mohammed | Mortgage Operations Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background-color: #0a2540;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #0a2540;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills span {
+            display: inline-block;
+            background: #e3e8f0;
+            padding: 8px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0a2540;
+            color: white;
+            margin-top: 40px;
+        }
+        a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<div><strong>Abdul Sahil Mohammed</strong></div>
-<div>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
 <header>
-<div>
-<img src="profile.jpeg" class="profile">
-<h1>Abdul Sahil Mohammed</h1>
-<h2>Production & Mortgage Operations Analyst</h2>
-<p>Lakewood, OH | (216) 484-4805 | amohammed2434@my.trine.edu</p>
-<a href="resume.pdf" download class="btn primary">Download Resume</a>
-<a href="https://github.com/" target="_blank" class="btn outline">GitHub</a>
-</div>
+    <h1>Abdul Sahil Mohammed</h1>
+    <p>Mortgage Operations & Production Analyst</p>
+    <p>Lakewood, OH | Open to Hybrid Opportunities</p>
 </header>
 
-<section id="about">
-<h2 class="section-title">Professional Summary</h2>
-<div class="card">
-Business Analytics graduate student specializing in financial documentation validation, workflow optimization, KPI monitoring, and production process management. Experienced in cross-functional coordination, data integrity auditing, and performance improvement initiatives within structured operational environments.
-</div>
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            Detail-oriented Business Analytics graduate student with hands-on experience in financial data validation, documentation review, workflow coordination, and KPI tracking. Passionate about improving production efficiency in mortgage and financial services environments.
+        </p>
+    </div>
 </section>
 
-<section id="experience">
-<h2 class="section-title">Experience</h2>
-<div class="card">
-<strong>Financial & Risk Analyst – Trine University</strong>
-<p>Aug 2024 – Dec 2025</p>
-<ul>
-<li>Validated balance sheets and financial documentation for compliance accuracy.</li>
-<li>Designed KPI dashboards improving tracking visibility.</li>
-<li>Performed root cause analysis reducing workflow inefficiencies.</li>
-</ul>
-</div>
+<section>
+    <h2>Featured Project</h2>
+    <div class="card">
+        <h3>Mortgage Loan Production & Workflow Simulation</h3>
+        <p><strong>Objective:</strong> Simulated a distributed retail mortgage production workflow to analyze documentation completeness, compliance checks, processing timelines, and approval outcomes.</p>
+        <ul>
+            <li>Calculated Approval Rate and Compliance Pass Rate</li>
+            <li>Analyzed Average Processing Time</li>
+            <li>Identified Missing Documentation Patterns</li>
+            <li>Performed Risk Segmentation using Credit Score & DTI</li>
+            <li>Developed KPI tracking dashboards using Python & Excel</li>
+        </ul>
+        <p><strong>Tools Used:</strong> Python (Pandas), Excel, Jupyter Notebook</p>
+    </div>
 </section>
 
-<section id="education">
-<h2 class="section-title">Education</h2>
-<div class="card">
-<strong>M.S. Business Analytics</strong> – Trine University (GPA: 3.80)
-</div>
+<section>
+    <h2>Skills</h2>
+    <div class="card skills">
+        <span>Loan File Review</span>
+        <span>Documentation Validation</span>
+        <span>Workflow Coordination</span>
+        <span>KPI Tracking</span>
+        <span>Regulatory Compliance Support</span>
+        <span>Excel Modeling</span>
+        <span>Python (Pandas)</span>
+        <span>Power BI</span>
+        <span>SQL</span>
+        <span>Process Improvement</span>
+    </div>
 </section>
 
-<section id="skills">
-<h2 class="section-title">Technical Skills</h2>
-<div class="card">
-<div class="skill">Excel<div class="progress"><div data-width="95%"></div></div></div>
-<div class="skill">SQL<div class="progress"><div data-width="85%"></div></div></div>
-<div class="skill">Power BI<div class="progress"><div data-width="80%"></div></div></div>
-<div class="skill">Data Analysis<div class="progress"><div data-width="90%"></div></div></div>
-</div>
-</section>
-
-<section id="contact">
-<h2 class="section-title">Contact</h2>
-<div class="card">
-<p>Email: amohammed2434@my.trine.edu</p>
-<p>Phone: (216) 484-4805</p>
-</div>
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: amohammed2434@my.trine.edu</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/abdul-sahil/" target="_blank">linkedin.com/in/abdul-sahil</a></p>
+        <p>GitHub: <a href="https://github.com/abdulsahiljan08" target="_blank">github.com/abdulsahiljan08</a></p>
+    </div>
 </section>
 
 <footer>
-© 2026 Abdul Sahil Mohammed | Elite Portfolio
+    © 2026 Abdul Sahil Mohammed | Mortgage Operations Portfolio
 </footer>
-
-<script>
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-const top=window.scrollY;
-const offset=sec.offsetTop-500;
-if(top>offset){sec.classList.add("show");}
-});
-});
-
-/* Animate skill bars */
-const skills=document.querySelectorAll(".progress div");
-window.addEventListener("scroll",()=>{
-skills.forEach(skill=>{
-const rect=skill.getBoundingClientRect();
-if(rect.top<window.innerHeight){
-skill.style.width=skill.getAttribute("data-width");
-}
-});
-});
-</script>
 
 </body>
 </html>
