@@ -17,7 +17,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    background: #f9f7ff;
     color: #2d1b4e;
 }
 
@@ -25,7 +25,7 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background: rgba(124, 58, 237, 0.9);
+    background: #7c3aed;
     padding: 15px 60px;
     display: flex;
     justify-content: space-between;
@@ -38,59 +38,80 @@ nav a {
     color: white;
     text-decoration: none;
     margin-left: 25px;
-    transition: 0.3s;
+    font-weight: 500;
 }
 
 nav a:hover {
-    color: #f3e8ff;
+    opacity: 0.8;
 }
 
 /* HERO */
 header {
-    height: 100vh;
-    background: linear-gradient(135deg, #a78bfa, #c084fc);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 120px 20px 60px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
-.hero-content {
-    z-index: 2;
+.hero-container {
+    max-width: 900px;
+}
+
+.profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 18px;
-    margin: 5px 0;
+header h2 {
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
-/* Floating boxes */
-.floating-box {
-    position: absolute;
-    background: rgba(255,255,255,0.2);
-    padding: 15px 25px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    animation: float 6s ease-in-out infinite;
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 30px;
+    text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
-.box1 { top: 20%; left: 10%; }
-.box2 { bottom: 25%; right: 15%; animation-delay: 2s; }
-.box3 { top: 35%; right: 8%; animation-delay: 4s; }
+.btn-primary {
+    background: white;
+    color: #7c3aed;
+}
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+.btn-primary:hover {
+    background: #f3e8ff;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #7c3aed;
 }
 
 /* SECTION */
@@ -100,7 +121,7 @@ section {
     margin: auto;
 }
 
-h2 {
+h2.section-title {
     text-align: center;
     margin-bottom: 40px;
     font-size: 30px;
@@ -108,42 +129,22 @@ h2 {
 
 /* CARDS */
 .card {
-    background: rgba(255,255,255,0.7);
+    background: white;
     padding: 30px;
     border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     margin-bottom: 30px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-}
-
-/* IMAGE SECTION */
-.photo-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.photo-container img {
-    width: 280px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    transition: 0.4s;
-}
-
-.photo-container img:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
 /* SKILLS */
 .skills span {
     display: inline-block;
-    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    background: #7c3aed;
     color: white;
     padding: 8px 15px;
     border-radius: 25px;
@@ -158,11 +159,6 @@ h2 {
     text-align: center;
     padding: 25px;
 }
-
-.small-text {
-    font-size: 14px;
-    opacity: 0.8;
-}
 </style>
 </head>
 
@@ -173,44 +169,40 @@ h2 {
 <div>
 <a href="#summary">Summary</a>
 <a href="#experience">Experience</a>
-<a href="#photos">Photos</a>
 <a href="#skills">Skills</a>
 </div>
 </nav>
 
 <header>
-<div class="hero-content">
-<h1>Mortgage Operations & Production Analyst</h1>
-<p>Lakewood, OH</p>
-<p>(216) 484-4805 | amohammed2434@my.trine.edu</p>
+<div class="hero-container">
+
+<img src="WhatsApp%20Image%202026-02-24%20at%205.44.34%20PM.jpeg" class="profile-pic" alt="Profile Photo">
+
+<h1>Abdul Sahil Mohammed</h1>
+<h2>Mortgage Operations & Production Analyst</h2>
+<p>Lakewood, OH | (216) 484-4805 | amohammed2434@my.trine.edu</p>
+
+<div class="hero-buttons">
+<a href="https://www.linkedin.com/" target="_blank" class="btn btn-primary">LinkedIn</a>
+<a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
 </div>
 
-<div class="floating-box box1">KPI Tracking</div>
-<div class="floating-box box2">Workflow Optimization</div>
-<div class="floating-box box3">Financial Data Analysis</div>
+</div>
 </header>
 
 <section id="summary">
-<h2>Professional Summary</h2>
+<h2 class="section-title">Professional Summary</h2>
 <div class="card">
 Detail-oriented Business Analytics graduate student with hands-on experience in financial documentation review, workflow coordination, compliance support, and KPI tracking. Passionate about improving production efficiency and operational accuracy in mortgage and financial services environments.
 </div>
 </section>
 
-<section id="photos">
-<h2>Professional Profile</h2>
-<div class="photo-container">
-<img src="profile1.jpg" alt="Profile Photo 1">
-<img src="profile2.jpg" alt="Profile Photo 2">
-</div>
-</section>
-
 <section id="experience">
-<h2>Experience</h2>
+<h2 class="section-title">Experience</h2>
 <div class="card">
 <strong>Financial & Risk Analyst – Trine University</strong>
-<div class="small-text">Aug 2024 – Dec 2025</div>
-<ul>
+<p style="font-size:14px; opacity:0.7;">Aug 2024 – Dec 2025</p>
+<ul style="margin-top:10px;">
 <li>Validated financial documentation and ensured compliance accuracy.</li>
 <li>Built Excel KPI tracking systems.</li>
 <li>Conducted root cause process improvement analysis.</li>
@@ -219,7 +211,7 @@ Detail-oriented Business Analytics graduate student with hands-on experience in 
 </section>
 
 <section id="skills">
-<h2>Core Competencies</h2>
+<h2 class="section-title">Core Competencies</h2>
 <div class="card skills">
 <span>Loan File Review</span>
 <span>Documentation Validation</span>
