@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdul Sahil Mohammed | Analytics Portfolio</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -17,122 +16,65 @@
 }
 
 body {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1f2937);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    color: white;
+    background: #f5f3ff; /* Lavender background */
+    color: #1a1a1a;
     overflow-x: hidden;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
-}
-
-/* Floating Skills Background */
-.floating-skills {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.floating-skills span {
-    position: absolute;
-    color: rgba(255,255,255,0.07);
-    font-size: 18px;
-    animation: float 25s linear infinite;
-}
-
-@keyframes float {
-    from { transform: translateY(100vh); }
-    to { transform: translateY(-10vh); }
-}
-
 header {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    z-index: 2;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .hero {
     backdrop-filter: blur(15px);
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.8);
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    max-width: 800px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 900px;
     animation: fadeIn 1.5s ease forwards;
 }
 
-.hero img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover;
-    border: 3px solid rgba(255,255,255,0.5);
-}
-
 .hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #6b46c1; /* Dark lavender */
 }
 
 .hero p {
-    opacity: 0.85;
-    margin-bottom: 20px;
-}
-
-.btn {
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    background: white;
-    color: #111;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
-    position: relative;
-    z-index: 2;
 }
 
 .glass {
     backdrop-filter: blur(12px);
-    background: rgba(255,255,255,0.08);
-    padding: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     margin-bottom: 40px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .glass:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 h2 {
     margin-bottom: 20px;
     font-size: 28px;
+    color: #6b46c1;
 }
 
 ul {
@@ -142,26 +84,45 @@ ul {
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 .skill {
-    padding: 10px 20px;
-    background: rgba(255,255,255,0.15);
+    padding: 8px 18px;
+    background: #ede9fe; /* Soft lavender */
     border-radius: 20px;
     font-size: 14px;
+    color: #6b46c1;
     transition: 0.3s;
 }
 
 .skill:hover {
-    background: white;
-    color: black;
+    background: #6b46c1;
+    color: #fff;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #6b46c1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #553c9a;
 }
 
 footer {
     text-align: center;
     padding: 40px;
     opacity: 0.7;
+    background: #6b46c1;
+    color: white;
 }
 
 @keyframes fadeIn {
@@ -173,81 +134,126 @@ footer {
 
 <body>
 
-<div class="floating-skills">
-<span style="left:10%">Google Ads</span>
-<span style="left:25%">SQL</span>
-<span style="left:40%">Data Analytics</span>
-<span style="left:55%">A/B Testing</span>
-<span style="left:70%">Power BI</span>
-<span style="left:85%">SEM</span>
-<span style="left:15%">KPI Optimization</span>
-<span style="left:65%">Machine Learning</span>
-</div>
-
 <header>
 <div class="hero">
-<img src="your-image.jpg" alt="Profile Image">
-<h1>Abdul Sahil Mohammed</h1>
+<h1>ABDUL SAHIL MOHAMMED</h1>
+<p>Lakewood, OH | (216) 484-4805 | amohammed2434@my.trine.edu</p>
 <p>Business Analytics Graduate | Performance Marketing Analyst</p>
-<p>Data-Driven Strategist specializing in campaign optimization, KPI analytics, and business intelligence solutions.</p>
-<button class="btn" onclick="document.getElementById('about').scrollIntoView()">Explore My Work</button>
+<button class="btn" onclick="document.getElementById('experience').scrollIntoView()">Explore My Work</button>
 </div>
 </header>
 
-<section id="about">
+<section id="summary">
 <div class="glass">
-<h2>About Me</h2>
+<h2>Professional Summary</h2>
 <p>
-Master of Science in Business Analytics graduate with experience in performance marketing and data-driven decision support.
-Skilled in KPI tracking, advanced campaign optimization, dashboard development, and translating complex datasets into strategic insights.
+Master of Science in Business Analytics graduate with experience in performance marketing and data-driven decision support. Skilled in data analysis, KPI tracking, campaign optimization, and translating business requirements into actionable insights. Experienced in building dashboards, conducting performance analysis, and collaborating with cross-functional teams to drive strategic business outcomes.
 </p>
 </div>
 </section>
 
-<section>
+<section id="experience">
 <div class="glass">
-<h2>Analytical Expertise</h2>
+<h2>Experience</h2>
+
+<h3>Trine University | Business & Data Analyst – Academic & Capstone Projects | Aug 2024 – Dec 2025 | Angola, Indiana</h3>
 <ul>
-<li>Advanced KPI Monitoring & Performance Dashboards</li>
-<li>Campaign Optimization (CPA, CTR, ROAS)</li>
-<li>Search Engine Marketing & Paid Media Strategy</li>
-<li>Root Cause & Performance Gap Analysis</li>
-<li>Data Visualization & Business Intelligence</li>
+<li>Analyzed financial and operational datasets to identify performance trends and support data-driven decision-making.</li>
+<li>Validated and structured large datasets to ensure accuracy, consistency, and reporting reliability.</li>
+<li>Developed Excel-based KPI dashboards to monitor revenue performance, cost metrics, and operational timelines.</li>
+<li>Collaborated with cross-functional teams to translate business requirements into actionable analytical insights.</li>
+<li>Conducted root cause analysis to identify performance gaps and recommended process improvements to enhance efficiency.</li>
+<li>Prepared executive-level reports and presentations summarizing key findings, trends, and strategic recommendations.</li>
+</ul>
+
+<h3>Adsiduous Media | Performance Marketing Analyst | Nov 2021 – Dec 2023 | Telangana, India</h3>
+<ul>
+<li>Managed and optimized Google Ads Search campaigns delivering against KPIs including CPA, CTR, ROAS, and revenue growth targets.</li>
+<li>Led end-to-end paid search strategy including advanced keyword research, search term analysis, and bid optimization.</li>
+<li>Developed, tested, and refined high-performing ad copy variations, increasing click-through rate (CTR) and conversion performance.</li>
+<li>Designed and executed structured A/B testing initiatives across keywords, landing pages, and ad creatives.</li>
+<li>Analyzed campaign metrics to generate actionable insights and present strategic recommendations to leadership.</li>
+<li>Collaborated with marketing, content, and vendor teams to align paid search initiatives with growth objectives.</li>
+</ul>
+
+<h3>Mercury Associates | Business Analyst Trainee Intern | Dec 2020 – Feb 2021 | Telangana, India</h3>
+<ul>
+<li>Analyzed operational and financial data to identify trends, support revenue forecasting, and enhance business decision-making.</li>
+<li>Developed and maintained Excel-based KPI dashboards to track sales performance and client activity.</li>
+<li>Partnered with cross-functional teams to gather requirements, validate datasets, and improve reporting accuracy.</li>
+<li>Streamlined reporting workflows, contributing to a 15% improvement in sales effectiveness and operational efficiency.</li>
+</ul>
+
+<h3>Osmania University | Academic Project – Rural Banking Systems Analysis | Jan 2023 – Jul 2023 | Telangana, India</h3>
+<ul>
+<li>Analyzed transaction workflows and financial operations data to identify inefficiencies impacting service delivery and risk exposure.</li>
+<li>Evaluated utilization patterns, customer behavior, and process bottlenecks to support operational risk assessment.</li>
+<li>Delivered data-driven recommendations projected to improve long-term profitability by 30% over five years.</li>
+</ul>
+
+</div>
+</section>
+
+<section id="education">
+<div class="glass">
+<h2>Education</h2>
+<h3>Trine University | Master of Science in Business Analytics | Aug 2024 – Dec 2025 | Angola, Indiana</h3>
+<ul>
+<li>GPA: 3.80 / 4.00</li>
+<li>Relevant Coursework: Advanced Data Mining, Predictive Analytics, Database Management, Data Visualization, Machine Learning, Analytics in Practice</li>
+</ul>
+
+<h3>Osmania University | Bachelor of Commerce in Computer Application | Sep 2020 – Jul 2023 | Telangana, India</h3>
+<ul>
+<li>GPA: 3.39 / 4.00</li>
+<li>Relevant Coursework: Accounting, Management, Business Law & Taxation, Statistics, Economics, E-commerce, Cyber Security</li>
 </ul>
 </div>
 </section>
 
-<section>
+<section id="skills">
 <div class="glass">
-<h2>Technical Skills</h2>
-<div class="skill-grid">
-<div class="skill">Google Ads</div>
-<div class="skill">Google Analytics</div>
-<div class="skill">Power BI</div>
-<div class="skill">Tableau</div>
-<div class="skill">SQL</div>
-<div class="skill">Excel Advanced</div>
-<div class="skill">A/B Testing</div>
-<div class="skill">Conversion Tracking</div>
-<div class="skill">Machine Learning</div>
-</div>
+<h2>Core Competencies & Technical Skills</h2>
+<p><strong>Core Competencies:</strong> Paid Search Campaign Management, SEM, Google Ads Optimization, Campaign Setup Execution, Keyword Research Bid Strategy, KPI Optimization (CPA, CTR, ROAS), A/B Testing, Performance Data Analysis, Conversion Rate Optimization, Cross-Functional Collaboration, Vendor Coordination, Performance Reporting, Revenue Growth Strategy.</p>
+<p><strong>Technical Skills:</strong> Google Ads, SA360, Google Analytics, Power BI, Tableau, Excel (Pivot Tables, XLOOKUP/VLOOKUP, IF Functions), SQL (Basic Querying), KPI Dashboards, Campaign Performance Reporting, Conversion Tracking, Quality Score Improvement.</p>
 </div>
 </section>
 
-<section>
+<section id="certifications">
 <div class="glass">
-<h2>Experience Highlights</h2>
+<h2>Certifications</h2>
 <ul>
-<li>Managed high-performance Google Ads campaigns aligned with revenue growth objectives.</li>
-<li>Built executive dashboards for campaign performance tracking and forecasting.</li>
-<li>Conducted structured experimentation to maximize profitability.</li>
-<li>Translated business requirements into actionable analytical insights.</li>
+<li>Data Science with R – Capstone Project</li>
+<li>Data Analysis with R</li>
+<li>Data Visualization with R</li>
+</ul>
+</div>
+</section>
+
+<section id="additional">
+<div class="glass">
+<h2>Additional Information</h2>
+<ul>
+<li>Authorized to work in the U.S. under OPT; eligible for full-time professional roles.</li>
+<li>Available for hybrid work schedule with minimum three days onsite; open to relocation nationwide.</li>
+<li>Strong analytical mindset, attention to detail, and commitment to continuous learning in performance marketing.</li>
+</ul>
+</div>
+</section>
+
+<section id="references">
+<div class="glass">
+<h2>References</h2>
+<ul>
+<li>Ahmedi Fathima, Sr. Professional Care Manager, UPMC Health Plan — (412) 736-1449 — ahmedif786@gmail.com</li>
+<li>Hassan Moussawi, Professor, Trine University — moussawih@trine.edu</li>
+<li>Ricardo McCoy, Professor, Trine University — mccoyr@trine.edu</li>
 </ul>
 </div>
 </section>
 
 <footer>
-© 2026 Abdul Sahil Mohammed | Advanced Analytics Portfolio
+© 2026 Abdul Sahil Mohammed | Analytics Portfolio
 </footer>
 
 </body>
