@@ -251,6 +251,136 @@ Master of Science in Business Analytics graduate with experience in performance 
 </ul>
 </div>
 </section>
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
+
+// 3D Floating Data Bars
+function DataBars() {
+  const group = useRef();
+
+  useFrame(({ clock }) => {
+    group.current.rotation.y = clock.getElapsedTime() * 0.2;
+  });
+
+  const bars = Array.from({ length: 40 });
+
+  return (
+    <group ref={group}>
+      {bars.map((_, i) => (
+        <mesh
+          key={i}
+          position={[
+            (Math.random() - 0.5) * 10,
+            (Math.random() - 0.5) * 6,
+            (Math.random() - 0.5) * 10,
+          ]}
+        >
+          <boxGeometry args={[0.2, Math.random() * 3 + 0.5, 0.2]} />
+          <meshStandardMaterial color="#4FD1C5" />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+export default function ElitePortfolio() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+  const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+
+  return (
+    <div ref={containerRef} className="relative bg-black text-white overflow-x-hidden">
+      {/* 3D Background */}
+      <div className="fixed inset-0 -z-10">
+        <Canvas camera={{ position: [0, 2, 8] }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[2, 5, 2]} intensity={1} />
+          <DataBars />
+          <OrbitControls enableZoom={false} />
+        </Canvas>
+      </div>
+
+      {/* Hero Section */}
+      <section className="h-screen flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+          className="text-center backdrop-blur-xl bg-white/10 p-12 rounded-3xl shadow-2xl"
+        >
+          <img
+            src="/profile.jpg"
+            alt="Abdul Sahil"
+            className="w-40 h-40 mx-auto rounded-full border-4 border-cyan-400 mb-6"
+          />
+          <h1 className="text-5xl font-bold mb-4">Abdul Sahil Mohammed</h1>
+          <p className="text-lg opacity-80">
+            MS Business Analytics | Performance & Paid Search Strategist
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Parallax Section 1 */}
+      <motion.section
+        style={{ y: y1 }}
+        className="min-h-screen flex items-center justify-center px-8"
+      >
+        <div className="max-w-4xl backdrop-blur-xl bg-white/10 p-10 rounded-3xl">
+          <h2 className="text-3xl font-semibold mb-6">Advanced Analytics Expertise</h2>
+          <ul className="space-y-4 opacity-90">
+            <li>• Predictive Modeling & Forecasting</li>
+            <li>• KPI Architecture & Performance Optimization</li>
+            <li>• Paid Search Strategy & Experimentation</li>
+            <li>• Data Storytelling & Executive Dashboards</li>
+          </ul>
+        </div>
+      </motion.section>
+
+      {/* Parallax Section 2 */}
+      <motion.section
+        style={{ y: y2 }}
+        className="min-h-screen flex items-center justify-center px-8"
+      >
+        <div className="max-w-4xl backdrop-blur-xl bg-white/10 p-10 rounded-3xl">
+          <h2 className="text-3xl font-semibold mb-6">Technical Stack</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              "Google Ads",
+              "SQL",
+              "Power BI",
+              "Tableau",
+              "Python",
+              "A/B Testing",
+              "Machine Learning",
+              "Conversion Analytics",
+              "Marketing Attribution",
+            ].map((skill, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.1 }}
+                className="p-4 bg-cyan-500/20 rounded-xl text-center"
+              >
+                {skill}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      <footer className="py-12 text-center opacity-60">
+        © 2026 Abdul Sahil Mohammed | Elite Analytics Portfolio
+      </footer>
+    </div>
+  );
+}
 
 <footer>
 © 2026 Abdul Sahil Mohammed | Analytics Portfolio
